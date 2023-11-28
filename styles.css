@@ -50,5 +50,5 @@ body {
 
 .pressed {
   box-shadow: 0 0 20px white;
-  background-color: grey;
+  background-color: rgb(109, 38, 191);
 }
