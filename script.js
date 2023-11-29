@@ -5,6 +5,8 @@
 
  var gamePattern = [];
 
+ var started = false;
+
  var userClickedPattern = [];
 
  /*var btnclick = document.querySelectorAll(".btn").length;
@@ -45,6 +47,10 @@ $(".btn").click( function(){
 
  
 function nextSequence() {
+
+  level++;
+
+  $("#level-title").text("Level " + level);
      
     var randomnumber = Math.floor(Math.random() * 4);
 
@@ -78,9 +84,16 @@ function nextSequence() {
 
  }
 
+ var level = 0;
+
+
  $(document).keypress(function(){
   
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
 
- }
+  }
 
- );
+ });
